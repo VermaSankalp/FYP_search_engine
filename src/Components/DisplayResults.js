@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const SearchBar = (props) => {
+const DisplayResults = () => {
 
     return (
         <div>
@@ -9,4 +9,4 @@ const SearchBar = (props) => {
     )
 }
 
-export default SearchBar;
+export default DisplayResults;
