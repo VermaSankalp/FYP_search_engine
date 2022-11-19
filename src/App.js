@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 import './App.css';
 import SolrConnector from 'react-solr-connector';
-import SearchBar from './Components/SeachBar.js';
-import DisplayResults from './Components/DisplayResults.js';
+import SearchBar from './Components/SolrQuery/SearchBar';
+import DisplayResults from './Components/DisplayResults/DisplayResults';
 
 const App = () => {
   const [searchParams, setSearchParams] = useState(null);
-  const [userQuery, setUserQuery] = useState('');
+
+  const doSearch = (searchParams) => {
+      setSearchParams(searchParams);
+  }
 
   return (
     <SolrConnector searchParams={searchParams}>
-      <SearchBar userQuery={userQuery}/>
+      <SearchBar doSearch={doSearch}/>
       <DisplayResults />
     </SolrConnector>
   )
