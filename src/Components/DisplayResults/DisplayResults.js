@@ -6,7 +6,8 @@ const DisplayResults = (props) => {
     return (
         <div className='resultsDiv'>
             <pre>
-                { JSON.stringify(props.solrConnector.response.response, null, 2) }
+                {props.solrConnector.response != null ? JSON.stringify(props.solrConnector.response.response, null, 2) : 
+                    <p className='preSearchMessage'>Enter a query and press search</p> }
             </pre>
         </div>
     )
