@@ -8,8 +8,15 @@ const Ting = (props) => {
     // const [fetchFields, setFetchFields] = useState("content");
 
    useEffect(() => {
-       setSolrSearchUrl("http://localhost:8983/solr/fyp_documents/select?fl=" + props.fetchFields + "&indent=true&q.op=OR&q=" + props.query)
-       axios.get(solrSearchUrl)
+       setSolrSearchUrl("/solr/fyp_documents/select")
+       axios.get(solrSearchUrl, {
+           params: {
+               "fl": props.fetchFields,
+               "q": props.query,
+               "indent": true,
+               "q.op": "OR"
+           }
+       })
        .then(res => {
            const bigManTing = res.data.response.docs;
            setBigMan(bigManTing);
