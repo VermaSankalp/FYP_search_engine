@@ -9,7 +9,7 @@ import UserInput from './Components/userInput';
 const App = () => {
   // const [searchParams, setSearchParams] = useState(null);
   const [query, setQuery] = useState("russia");
-  const [fetchFields, setFetchFields] = useState("");
+  const [fetchFields, setFetchFields] = useState("id");
 
   // const doSearch = (searchParams) => {
   //     setSearchParams(searchParams);
