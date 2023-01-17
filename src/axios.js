@@ -20,7 +20,7 @@ const Ting = (props) => {
        .then(res => {
            const bigManTing = res.data.response.docs;
            setBigMan(bigManTing);
-           console.log(solrSearchUrl);
+        //    console.log(solrSearchUrl);
         //    console.log(bigManTing);
        })
    }, [props.fetchFields, props.query, solrSearchUrl])
