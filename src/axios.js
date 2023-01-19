@@ -8,7 +8,7 @@ const Ting = (props) => {
     // const [fetchFields, setFetchFields] = useState("content");
 
    useEffect(() => {
-       setSolrSearchUrl("http://localhost:8983//solr/fyp_documents/select")
+       setSolrSearchUrl("http://localhost:8983/solr/fyp_documents/select")
        axios.get(solrSearchUrl, {
            params: {
                "fl": props.fetchFields,
