@@ -5,10 +5,18 @@ const DisplayResults = (props) => {
 
     return (
         <div className='resultsDiv'>
-            <pre>
-                {props.solrConnector.response != null ? JSON.stringify(props.solrConnector.response.response, null, 2) : 
-                    <p className='preSearchMessage'>Enter a query and press search</p> }
-            </pre>
+            {props.results.map(obj => {
+                return (
+                    <div className='resultsBox'>
+                        <p>{obj.id}</p>
+                        <p>{obj.title}</p>
+                        <p>{obj.source}</p>
+                        <p>{obj.sourceName}</p>
+                        <p>{obj.releaseDate}</p>
+                        {/* <p>{obj.content}</p> */}
+                    </div>
+                );
+            })}
         </div>
     )
 }

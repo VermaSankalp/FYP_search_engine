@@ -17,11 +17,6 @@ const UserInput = (props) => {
                     <input type="text" value={props.query} 
                     onChange={e => {props.setQuery(e.target.value)}}/>
                 </p>
-                <p> 
-                    <h3>fetchFields:</h3>
-                    <input type="text" value={props.fetchFields} 
-                    onChange={e => {props.setFetchFields(e.target.value)}}/>
-                </p>
                 <button type='submit' className='submitButton'>
                     Search
                 </button>

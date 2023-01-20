@@ -9,7 +9,6 @@ import UserInput from './Components/userInput';
 const App = () => {
   // const [searchParams, setSearchParams] = useState(null);
   const [query, setQuery] = useState("russia");
-  const [fetchFields, setFetchFields] = useState("id");
 
   // const doSearch = (searchParams) => {
   //     setSearchParams(searchParams);
@@ -20,9 +19,10 @@ const App = () => {
     //   <SearchBar doSearch={doSearch}/>
     //   <DisplayResults />
     // </SolrConnector>
-    <div style={{marginLeft: '30px'}}>
-      <UserInput query={query} setQuery={setQuery} fetchFields={fetchFields} setFetchFields={setFetchFields} />
-      <Ting query={query} fetchFields={fetchFields} />
+    <div className='overallDiv'>
+      <h3>What would you like to search?</h3>
+      <UserInput query={query} setQuery={setQuery} />
+      <Ting query={query} />
     </div>
   )
 }
