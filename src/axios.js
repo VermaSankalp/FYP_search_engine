@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import DisplayResults from './Components/DisplayResults/DisplayResults';
+import DisplayResults from "./common/Components/DisplayResults/DisplayResults";
 
-const Ting = (props) => {
+const Axios = (props) => {
     const [bigMan, setBigMan] = useState();
     const [solrSearchUrl, setSolrSearchUrl] = useState("");
 
@@ -32,4 +32,4 @@ const Ting = (props) => {
    )
 }
 
-export default Ting;
+export default Axios;
