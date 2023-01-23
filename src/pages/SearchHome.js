@@ -4,21 +4,27 @@ import { InputField } from "../common/Components/InputField.tsx";
 const SearchHome = () => {
     const [query, setQuery] = useState("")
     return (
-        <div className="bg-white">
-            <div className="flex flex-col gap-4 align-middle item-center">
-                <div className="text-4xl">Financial News Search</div>
-                <InputField customStyles={["py-4", "w-[600px]", "text-2xl"]} inputCallback={(query) => setQuery(query)}/>
-                <Button 
-                    buttonCallback={()=>console.log(`Search ${query}`)}
-                    customStyles={["w-[200px]"]}
-                >
-                    Search
-                </Button>
+        <>
+            <div className="px-32 py-[52px] z-10 relative overflow-auto align-middle">
+                <div className="flex flex-col gap-4">
+                    <div className="text-4xl text-center">Financial News Search</div>
+                    <div className="mx-auto">
+                        <InputField customStyles={["py-4", "w-[600px]", "text-2xl"]} inputCallback={(query) => setQuery(query)}/>
+                    </div>
+                    <div className="mx-auto">
+                        <Button 
+                            buttonCallback={()=>console.log(`Search ${query}`)}
+                            customStyles={["w-[200px]"]}
+                        >
+                            Search
+                        </Button>
+                    </div>
+                </div>
+                <div>
+                    {query}
+                </div>
             </div>
-            <div>
-                {query}
-            </div>
-        </div>
+        </>
     )
 }
 

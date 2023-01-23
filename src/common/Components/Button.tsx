@@ -11,6 +11,7 @@ export const Button = ({children, buttonCallback, customStyles} : ButtonProps) :
     return (
         <button className={finalClass.join(" ")} onClick={()=>buttonCallback()}>
             {children}
+            <div></div>
         </button>
     )
 }
