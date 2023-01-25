@@ -9,7 +9,7 @@ const App = () => {
       <Routes>
         <Route element={<SideBar/>}>
           <Route path="search" element={<SearchHome/>} />
-          <Route path="searchResults" element={<SearchResults/>} />
+          <Route path="search-results" element={<SearchResults/>} />
         </Route>
         <Route path="*" element={<Navigate to="search"/>} />
       </Routes>
