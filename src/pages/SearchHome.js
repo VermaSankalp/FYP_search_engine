@@ -5,9 +5,10 @@ const SearchHome = () => {
     const [query, setQuery] = useState("")
     return (
         <>
-            <div className="px-32 py-[52px] z-10 relative overflow-auto">
+            {/* TODO: Import Open Sans Pro Font */}
+            <div className="px-32 py-[52px] z-10 relative overflow-auto h-full">
                 <div className="flex flex-col gap-4 align-middle">
-                    <div className="text-4xl text-center">Financial News Search</div>
+                    <div className="text-4xl text-center font-Open Sans Pros">Financial News Search</div>
                     <div className="mx-auto">
                         <InputField customStyles={["py-4", "w-[600px]", "text-2xl"]} inputCallback={(query) => setQuery(query)}/>
                     </div>

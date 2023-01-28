@@ -3,7 +3,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily : {
+      'VT323' : ['VT323', 'cursive'],
+    },
   },
   plugins: [],
 }
