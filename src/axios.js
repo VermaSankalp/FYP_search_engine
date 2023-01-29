@@ -26,8 +26,9 @@ const Axios = (props) => {
 
    return (
         <div>
-            {bigMan !== undefined ? 
-                <DisplayResults results={bigMan} /> : "Piss off"}
+            {/* {bigMan !== undefined ? 
+                <DisplayResults results={bigMan} /> : "Piss off"} */}
+            {props.query}
         </div>
    )
 }

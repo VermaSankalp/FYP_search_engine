@@ -4,7 +4,7 @@ module.exports = {
   ],
   theme: {
     fontFamily : {
-      'VT323' : ['VT323', 'cursive'],
+      'source-sans-pro': ['"Source Sans Pro"']
     },
   },
   plugins: [],

@@ -15,7 +15,7 @@ const SideBar = () => {
     }
 
     return (
-        <div className="w-full flex flex-col flex-wrap h-[100vh]">
+        <div className="w-full flex flex-col flex-wrap h-[100vh] font-source-sans-pro">
             <div className="w-1/6 bg-[#A80000] h-full">
                 <div className="h-1/6 text-white px-5 py-5 text-2xl text-center font-medium">Market Analysis Data Repository</div>
                 <div className="h-5/6">
