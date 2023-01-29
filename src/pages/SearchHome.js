@@ -34,9 +34,6 @@ const SearchHome = () => {
                         </Button>
                     </div>
                 </div>
-                <div>
-                    {query}
-                </div>
             </div>
         </>
     )

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import DisplayResults from "./common/Components/DisplayResults/DisplayResults";
+import DisplayResults from "./common/Components/DisplayResults.tsx";
 
 const Axios = (props) => {
     const [bigMan, setBigMan] = useState();
