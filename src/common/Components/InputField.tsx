@@ -1,4 +1,7 @@
 import React from "react";
+import { ReactComponent as MagGlassSvg } from '../../assets/svgs/mag-glass.svg';
+
+
 
 type InputFieldProps = {
     customStyles : string[]; 
@@ -7,7 +10,7 @@ type InputFieldProps = {
 }
 
 export const InputField = ({customStyles, inputCallback, onKeyDownCallback} : InputFieldProps) : JSX.Element => {
-    const baseClass = ["shadow", "appearance-none", "rounded-full", "px-3", "text-gray-700", "mb-3", "leading-tight", "focus:outline-none", "focus:shadow-outline", "shadow-lg", "border-[1px]", "border-black"]
+    const baseClass = ["flex", "flex-row", "shadow", "appearance-none", "rounded-full", "px-3", "text-gray-700", "mb-3", "leading-tight", "focus:outline-none", "focus:shadow-outline", "shadow-lg", "border-[1px]", "border-black"]
     const finalClass = baseClass.concat(customStyles); 
 
     const handleKeyDown = (event : any) => {
@@ -17,6 +20,9 @@ export const InputField = ({customStyles, inputCallback, onKeyDownCallback} : In
     }
 
     return (
-        <input className={finalClass.join(" ")} type="text" onChange={(e) => inputCallback(e.target.value)} onKeyDown={handleKeyDown}/>
+        <div className={finalClass.join(" ")}>
+            <MagGlassSvg width="30px" height="30px"/>
+            <input className="focus:outline-0 w-full ml-2" type="text" onChange={(e) => inputCallback(e.target.value)} onKeyDown={handleKeyDown}/>
+        </div>
     )
 }
