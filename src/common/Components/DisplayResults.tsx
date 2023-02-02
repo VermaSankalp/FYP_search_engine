@@ -12,14 +12,18 @@ type DisplayResultsProps = {
 const DisplayResults = ({id, title, source, sourceName, releaseDate, content} : DisplayResultsProps) : JSX.Element => {
 
     return (
-        <div className='ml-2 text-left font-source-sans-pro'>
+        <div className='mx-auto w-[85%] text-left font-source-sans-pro'>
             <div className='bg-[#f6f6f6]'>
-                <p>{id}</p>
-                <p>{title}</p>
-                <p>{source}</p>
-                <p>{sourceName}</p>
-                <p>{releaseDate}</p>
-                {/* <p>{content}</p> */}
+                <div className='text-green-800'>
+                    {source}
+                </div>
+                <a href={source} className="text-blue-800 font-medium text-xl hover:underline">{title}</a>
+                <div className='text-sm'>
+                    Article Release Date : {releaseDate}
+                </div>
+                <div className='text-ellipsis line-clamp-3'>
+                    {content}
+                </div>
             </div>
         </div>
     )

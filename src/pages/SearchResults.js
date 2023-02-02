@@ -70,14 +70,14 @@ const SearchResults = () => {
         // </div>
         <>
             <div className="px-32 py-[52px] z-10 relative overflow-auto h-full font-source-sans-pro">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 mb-4">
                     <div className="mx-auto">
                         <InputField customStyles={["py-4", "w-[600px]", "text-2xl"]} query={query} inputCallback={(query) => setQuery(query)} onKeyDownCallback={() => {
                             navigateWithQuery(query);
                         }}/>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-8">
                 {
                     mockData.map((record) => {
                         return (

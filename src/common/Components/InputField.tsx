@@ -1,7 +1,5 @@
 import React from "react";
-import { ReactComponent as MagGlassSvg } from '../../assets/svgs/mag-glass.svg';
-
-
+import { MagGlassSvg } from "../../assets/svgs";
 
 type InputFieldProps = {
     customStyles : string[]; 

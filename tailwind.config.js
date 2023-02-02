@@ -7,5 +7,7 @@ module.exports = {
       'source-sans-pro': ['"Source Sans Pro"']
     },
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/line-clamp'),
+  ],
 }
