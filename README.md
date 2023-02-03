@@ -11,7 +11,7 @@ Uses the React-Solr-Connector library to return query results from the fyp_docum
 3. Run the command "npm run start" to run the project in development mode (hot reload).
 4. Go to "localhost:3000" to view the web app (assuming you have nothing else on this port) 
 
-<ins>Search Engine Usage</ins>
+## Search Engine Usage
 Type is keywords from events (such as 'Russia' or 'Covid') to get the relevant financial documents stored in the database. 
 
 ## The following are the steps to setup SOLR
