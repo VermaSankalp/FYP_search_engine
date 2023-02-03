@@ -32,29 +32,9 @@ In order to fix this error, some added configurations need to be added to the sc
 1. Add the following jar files into the server/solr-webapp/webapp/WEB-INF/lib directory:
     jetty-servlets-8.1.14.v20131031.jar
     jetty-util-8.1.14.v20131031.jar
-2. Edit the server/solr-webapp/webapp/WEB-INF/web.xml file to include the following code:
-    <filter>
-    <filter-name>cross-origin</filter-name>
-    <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
-    <init-param>
-        <param-name>allowedOrigins</param-name>
-        <param-value>*</param-value>
-    </init-param>
-    <init-param>
-        <param-name>allowedMethods</param-name>
-        <param-value>GET,POST,OPTIONS,DELETE,PUT,HEAD</param-value>
-    </init-param>
-    <init-param>
-        <param-name>allowedHeaders</param-name>
-        <param-value>origin, content-type, accept</param-value>
-    </init-param>
-    </filter>
+2. Edit the server/solr-webapp/webapp/WEB-INF/web.xml file to include the following code: **take code from source** 
 
-    <filter-mapping>
-    <filter-name>cross-origin</filter-name>
-    <url-pattern>/*</url-pattern>
-    </filter-mapping>
-**The above code allows the CORS server to queried from all origins**
+**The code allows the CORS server to queried from all origins**
 3. Restart the SOLR core using the commmand bin/solr restart.
 
 *Source: https://opensourceconnections.com/blog/2015/03/26/going-cross-origin-with-solr/* 
