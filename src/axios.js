@@ -7,7 +7,7 @@ const Axios = (props) => {
     const [solrSearchUrl, setSolrSearchUrl] = useState("");
 
    useEffect(() => {
-       setSolrSearchUrl("http://localhost:8983/solr/fyp_documents/select")
+       setSolrSearchUrl("http://localhost:8983/solr/test_core/select")
        axios.get(solrSearchUrl, {
            params: {
                "fl": props.fetchFields,
@@ -20,15 +20,16 @@ const Axios = (props) => {
        .then(res => {
            const bigManTing = res.data.response.docs;
            setBigMan(bigManTing);
-        //    console.log(bigManTing);
+           console.log(bigManTing, " qwejqekqe");
        })
+       .catch(err => console.log(`This is the error ${err}`))
    }, [props.fetchFields, props.query, solrSearchUrl])
-
+   
    return (
         <div>
-            {/* {bigMan !== undefined ? 
-                <DisplayResults results={bigMan} /> : "Piss off"} */}
-            {props.query}
+            {bigMan !== undefined ? 
+                <DisplayResults results={bigMan} /> : "Piss off"}
+            {/* {props.query} */}
         </div>
    )
 }
