@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import DisplayResults from "./common/Components/DisplayResults.tsx";
+import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import DisplayResults from "./common/Components/DisplayResults.tsx";
 
 const Axios = (props) => {
-    const [bigMan, setBigMan] = useState();
-    const [solrSearchUrl, setSolrSearchUrl] = useState("");
+    // const [bigMan, setBigMan] = useState();
+    // const [solrSearchUrl, setSolrSearchUrl] = useState("");
 
    useEffect(() => {
        setSolrSearchUrl("http://localhost:8983/solr/test_core/select")
@@ -31,7 +31,7 @@ const Axios = (props) => {
                 <DisplayResults results={bigMan} /> : "Piss off"}
             {/* {props.query} */}
         </div>
-   )
+    )
 }
 
 export default Axios;

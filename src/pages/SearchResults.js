@@ -50,7 +50,7 @@ const SearchResults = () => {
                         <InputField customStyles={["py-4", "w-[600px]", "text-2xl"]} query={query} inputCallback={(query) => setQuery(query)} onKeyDownCallback={() => {
                             console.log("Enter is being clicked")
                             navigateWithQuery(query);
-                        }}/>
+                        }} />
                     </div>
                 </div>
                 <div className="flex flex-col gap-8">
