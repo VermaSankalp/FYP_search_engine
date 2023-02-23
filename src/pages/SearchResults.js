@@ -5,7 +5,8 @@ import { InputField } from "../common/Components/InputField.tsx";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import DisplayResults from "../common/Components/DisplayResults.tsx";
 import axios from "axios";
-
+import Axios from '../axios';
+import UserInput from '../common/Components/userInput';
 
 const SearchResults = () => {
     const [searchParams] = useSearchParams();
@@ -77,6 +78,11 @@ const SearchResults = () => {
                 </div>
             </div>
         </>
+        // <div className='text-center'>
+        //     {/* <h3>What would you like to search?</h3> */}
+        //     {/* <UserInput query={query} setQuery={setQuery} /> */}
+        //     <Axios query={query} />
+        // </div>
     )
 }
 
